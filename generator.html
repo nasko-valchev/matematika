@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Генератор на задачи</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neucha">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--[if lt IE 7]> 
+      <div style=' clear: both; text-align:center;  padding:0 0 0 0px; position: relative;'>
+         <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
+      </div>
+      <![endif]-->
+</head>
+
+<body>
+    <div id="container">
+        <!-- header -->
+        <header>
+            <nav>
+                <div class="header-right">
+                    <a href="index.html">Начало</a>
+                    <a href="detektivski-zad1.html">Основни теми</a>
+                    <a href="game.html" class="active">Приложения</a>
+                    <a href="about.html">За проекта</a>
+                </div>
+                <h1>Състезателна математика</h1>
+            </nav>
+            <div class="clear"></div>
+        </header>
+        <!-- content -->
+        <section>
+            <aside>
+                <h2 class="aligncenter">Основни  теми</h2>
+                <nav>
+                    <ul>
+                        <li class="button1"><a href="detektivski-zad1.html">Детективски задачи</a></li>
+                        <li class="button2"><a href="racheshki-zad1.html">Рачешки задачи</a></li>
+                        <li class="button3"><a href="valshebni-zad1.html">Вълшебни отсечки</a></li>
+                        <li class="button4"><a href="zaici-zad1.html">Зайци и кокошки</a></li>
+                        <li class="button5"><a href="mnozhestva-zad1.html">Множества</a></li>
+                        <li class="button6"><a href="add.html">Вашите задачи</a></li>
+                    </ul>
+                </nav>
+                <h2 class="aligncenter">Приложения</h2>
+                <nav>
+                    <ul>
+                        <li class="button5"><a href="game.html">Предизвикателство</a></li>
+                        <li class="button2"><a href="generator.html">Генератор на задачи</a></li>
+                        <li class="button1"><a href="test.html">Ти знаеш ли?</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- end aside menu -->
+            <article>
+                <div class="inside">
+                    <h3 class="bg2">Генератор на задачи</h3>
+                    <p> Избери тематика и трудност и натисни съответния бутон.</p>
+                    <table>
+                        <tr>
+                            <th>
+                                <h2>В гората</h2>
+                                <button onclick="image1()">Нова задача</button> 
+								<button onclick="image2()"> С повишена трудност</button>
+                            </th>
+
+                            <th>
+                                <h2>В училище</h2>
+                                <button onclick="image3()">Нова задача</button>
+                                <button onclick="image4()"> С повишена трудност</button>
+                            </th>
+
+                        </tr>
+                        <tr>
+                            <td><img src="images/rak-zad2.png" alt="tema1" style="width:300px;"></td>
+
+                            <td><img src="images/school.png" alt="tema2" style="width:300px;"></td>
+
+                        </tr>
+                    </table>
+
+                    <script>
+                        function image1() {
+                            document.getElementById("show").style.display = "block";
+                            var x = 10+Math.floor(Math.random() * (10));
+                            document.getElementById("myImg").src = "generator/zad" + x + ".png";
+							// clear last answer 
+							document.getElementById("ans").value = "";
+							document.getElementById("answer").innerHTML = "";
+							
+                        }
+                    </script>
+                    <script>
+                        function image2() {
+                            document.getElementById("show").style.display = "block";
+                            var x = 20 + Math.floor(Math.random() * (10));
+                            document.getElementById("myImg").src = "generator/zad" + x + ".png";
+								// clear last answer 
+							document.getElementById("ans").value = "";
+							document.getElementById("answer").innerHTML = "";
+                        }
+                    </script>
+                    <script>
+                        function image3() {
+                            document.getElementById("show").style.display = "block";
+                            var x = 30 + Math.floor(Math.random() * (10));
+                            document.getElementById("myImg").src = "generator/zad" + x + ".png";
+								// clear last answer 
+							document.getElementById("ans").value = "";
+							document.getElementById("answer").innerHTML = "";
+                        }
+                    </script>
+                    <script>
+                        function image4() {
+							    // display randam zad
+                            document.getElementById("show").style.display = "block";
+                            var x = 40 + Math.floor(Math.random() * (10));
+                            document.getElementById("myImg").src = "generator/zad" + x + ".png";
+								// clear last answer 
+							document.getElementById("ans").value = "";
+							document.getElementById("answer").innerHTML = "";
+                        }
+                    </script>
+
+                    <div id="show" style="display:none">
+                        <h2>Задача</h2>
+                        <img id="myImg" src="generator/zad1.png" style="width:600px;">
+                        <div style="text-align:center">
+                            <p> Реши задачата и в празното поле за отговор попълни само число!</p>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h2>Отговор: </h2></td>
+                                <td>
+                                    <input type="text" id="ans" style="width:50px ">
+                                </td>
+                                <td>
+                                    <h2 id="answer"></h2></td>
+                            </tr>
+                        </table>
+
+                        <p> Провери своя отговор:
+                            <button type="button" onclick="checkAnswer()">Провери</button>
+                        </p>
+                    </div>
+                    <h2 id="answer"></h2>
+
+                    <script>
+                        function checkAnswer() {
+                            var ans, zad, pos1, pos2, res, text;
+								//array of answers
+                            var answers = ["28", "23", "31","31","66","36","14","16","7","9","24", "18", "26","14","16","12","64","32","8","32","3","4", "2","2","4","29","30","22","30","28","38", "108", "45","20","15","23","13","8","34","56"]
+                                //get the value of Input
+                            ans = document.getElementById("ans").value;
+								//get the src of myImg
+                            zad = document.getElementById("myImg").src;
+								//the index for answer 
+                            pos1 = zad.indexOf("zad");
+                            pos2 = zad.indexOf(".png");
+                            res = zad.slice(pos1 + 3, pos2)-10;
+
+                            
+                            if (ans == answers[res]) {
+                                text = "Правилно!";
+                            } else {
+                                text = "Грешно!";
+                            }
+                            //text;
+                            document.getElementById("answer").innerHTML = text;
+                        }
+                    </script>
+                </div>
+            </article>
+        </section>
+        <div class="clear"></div>
+        <!-- footer -->
+        <footer>
+            <!-- sitemap and form -->
+            <ul class="list1">
+                <li class="button5"><a href="sitemap.html">Карта на сайта <img src="images/sitemap.png" alt="sitemap" style="width:50px; float:right"></a></li>
+                <li class="button2"><a href="new-zad.html">Предложи задача <img src="images/form.png" alt="contactform" style="width:50px; float:right"></a></li>
+            </ul>
+            <!-- search script -->
+            <script>
+                (function() {
+                    var cx = '010771404646263725437:5cwm-6bdvzo';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                })();
+                document.write("<gcse:search><\/gcse:search>");
+            </script>
+            <div class="aligncenter"> Copyright © Състезателна математика, 2019.</div>
+        </footer>
+    </div>
+</body>
+
+</html>

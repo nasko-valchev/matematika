@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Зайци и кокошки | Реши сам</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neucha">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--[if lt IE 7]> 
+      <div style=' clear: both; text-align:center;  padding:0 0 0 0px; position: relative;'>
+         <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
+      </div>
+      <![endif]-->
+</head>
+
+<body>
+    <div id="container">
+        <!-- header -->
+        <header>
+            <nav>
+                <div class="header-right">
+                    <a href="index.html">Начало</a>
+                    <a href="detektivski-zad1.html" class="active">Основни теми</a>
+                    <a href="game.html">Приложения</a>
+                    <a href="about.html">За проекта</a>
+                </div>
+                <h1>Състезателна математика</h1>
+            </nav>
+            <div class="clear"></div>
+        </header>
+        <!-- content -->
+        <section>
+            <aside>
+                <h2 class="aligncenter">Основни  теми</h2>
+                <nav>
+                    <ul>
+                        <li class="button1"><a href="detektivski-zad1.html">Детективски задачи</a></li>
+                        <li class="button2"><a href="racheshki-zad1.html">Рачешки задачи</a></li>
+                        <li class="button3"><a href="valshebni-zad1.html">Вълшебни отсечки</a></li>
+                        <li class="button4"><a href="zaici-zad1.html">Зайци и кокошки</a></li>
+                        <li class="button5"><a href="mnozhestva-zad1.html">Множества</a></li>
+                        <li class="button6"><a href="add.html">Вашите задачи</a></li>
+                    </ul>
+                </nav>
+                <h2 class="aligncenter">Приложения</h2>
+                <nav>
+                    <ul>
+                        <li class="button5"><a href="game.html">Предизвикателство</a></li>
+                        <li class="button2"><a href="generator.html">Генератор на задачи</a></li>
+                        <li class="button1"><a href="test.html">Ти знаеш ли?</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- end aside menu -->
+            <article>
+                <div class="inside">
+                    <h3 class="bg4">Зайци и кокошки</h3>
+                    <ul class="list1">
+                        <li><a href="zaici-zad1.html">Задача 1.</a></li>
+                        <li><a href="zaici-zad2.html">Задача 2.</a></li>
+                        <li><a href="zaici-zad3.html">Задача 3.</a></li>
+                        <li><a href="zaici-zad4.html" class="active">Задача 4.</a></li>
+                        <li><a href="zaici-resurs.html">Ресурси</a></li>
+                    </ul>
+                    <h2>Задача 4. "В парка"</h2><img src="images/matiaz-zad4.png" alt="matiaz" style="width:210px; float:right">
+                    <p> В парка играят момчета и кучета. Общият брой на краката им е 22. Децата са повече от кучетата и броя им е четно число.<strong> С колко момчета са повече от кучетата</strong> ? </p>
+                    <br />
+                    <img src="images/zaici-zad4.png" alt="zaici4" style="width:400px; float:left">
+                    <br />
+                    <div style="text-align:center">
+                        
+                        
+                        <p> Ако се затрудняваш или желаеш да ти помогнем с решението, избери бутона помощ.</p>
+						<button type="button" onclick="help()">Помощ</button>
+                    </div>
+                    <div class="clear"></div>
+                    <h2>Отговор</h2>
+
+                    <table>
+                        <tr>
+                            <th>Момчетата са с </th>
+                            <td>
+                                <input type="text" id="boy" style="width:50px;">
+                            </td>
+                            <th> повече от кучетата </th>
+
+                        </tr>
+                    </table>
+
+                    <p> Провери своя отговор:
+                        <button type="button" onclick="checkAnswer()">Провери</button>
+                        
+                    </p>
+
+                    <span id="answer"></span>
+
+                    <script>
+                        function checkAnswer() {
+                            var boy, text;
+
+                            // Get the value boy
+                            boy = document.getElementById("boy").value;
+
+                            // If answer is 5
+                            if (boy == 5) {
+                                text = "Правилно!";
+                            } else {
+                                text = "Грешно!";
+                            }
+                            //write text
+                            document.getElementById("answer").innerHTML = text;
+                        }
+                    </script>
+                    <div id="help">
+
+                        <h3 class="bg4">Помощ</h3>
+
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td> . </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td> + </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td> . </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td> = 22</td>
+
+                            </tr>
+
+                            <tr>
+                                <td colspan="8"><img src="images/zaici-linia.png" alt="linia" style="width:600px; "></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <script>
+                        function help() {
+                            document.getElementById("help").style.display = "block";
+                        }
+                    </script>
+                </div>
+            </article>
+        </section>
+        <div class="clear "></div>
+        <!-- footer -->
+        <footer>
+            <!-- sitemap and form -->
+            <ul class="list1 ">
+                <li class="button5 "><a href="sitemap.html ">Карта на сайта <img src="images/sitemap.png " alt="sitemap " style="width:50px; float:right "></a></li>
+                <li class="button2 "><a href="new-zad.html ">Предложи задача <img src="images/form.png " alt="contactform " style="width:50px; float:right "></a></li>
+            </ul>
+            <!-- search script -->
+            <script>
+                (function() {
+                    var cx = '010771404646263725437:5cwm-6bdvzo';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                })();
+                document.write("<gcse:search> < \/gcse:search>");
+            </script>
+            <div class="aligncenter"> Copyright © Състезателна математика, 2019.</div>
+        </footer>
+    </div>
+</body>
+
+</html>

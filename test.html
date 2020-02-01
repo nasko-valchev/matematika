@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ти знаеш ли?</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neucha">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--[if lt IE 7]> 
+      <div style=' clear: both; text-align:center;  padding:0 0 0 0px; position: relative;'>
+         <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
+      </div>
+      <![endif]-->
+</head>
+
+<body>
+    <div id="container">
+        <!-- header -->
+        <header>
+            <nav>
+                <div class="header-right">
+                    <a href="index.html">Начало</a>
+                    <a href="detektivski-zad1.html">Основни теми</a>
+                    <a href="game.html" class="active">Приложения</a>
+                    <a href="about.html">За проекта</a>
+                </div>
+                <h1>Състезателна математика</h1>
+            </nav>
+            <div class="clear"></div>
+        </header>
+        <!-- content -->
+         <section>
+            <aside>
+               <h2 class="aligncenter">Основни  теми</h2>
+               <nav>
+                  <ul>
+                     <li class="button1"><a href="detektivski-zad1.html">Детективски задачи</a></li>
+                     <li class="button2"><a href="racheshki-zad1.html">Рачешки задачи</a></li>
+                     <li class="button3"><a href="valshebni-zad1.html">Вълшебни отсечки</a></li>
+                     <li class="button4"><a href="zaici-zad1.html">Зайци и кокошки</a></li>
+                     <li class="button5"><a href="mnozhestva-zad1.html">Множества</a></li>
+                     <li class="button6"><a href="add.html">Вашите задачи</a></li>
+                  </ul>
+               </nav>
+               <h2 class="aligncenter">Приложения</h2>
+               <nav>
+                  <ul>
+                     <li class="button5"><a href="game.html">Предизвикателство</a></li>
+                     <li class="button2"><a href="generator.html">Генератор на задачи</a></li>
+                     <li class="button1"><a href="test.html">Ти знаеш ли?</a></li>
+                  </ul>
+               </nav>
+            </aside><!-- end aside menu -->
+            <article>
+               <div class="inside">
+                   <h3 class="bg5">Ти знаеш ли?</h3>
+				   <ol type="1">
+		<li>
+			<p><strong>1. При кой от типовете задачи решението започва от края към началото?</strong></p>
+			<input type="radio" name="1" value="1" />Детективски задачи; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="1" value="2" />Множества; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="1" value="3" />Рачешки задачи; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="1" value="4" />Вълшебни отсечки. <img src="images/empty1.png" alt="empty"><br />
+		</li><br />
+		<li>
+			<p><strong>2. С кой тип задачи свързвате кръговете на Ойлер?</strong></p>
+			<input type="radio" name="2" value="1" />Детективски задачи; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="2" value="2" />Множества; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="2" value="3" />Рачешки задачи; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="2" value="4" />Вълшебни отсечки. <img src="images/empty1.png" alt="empty"><br />
+		</li><br />
+		<li>
+			<p><strong>3. Към кой тип спада задачата на Айнщайн, известна с това, че едва 2% от хората могат да я решат?</strong></p>
+			<input type="radio" name="3" value="1" />Детективски задачи; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="3" value="2" />Множества; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="3" value="3" />Рачешки задачи; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="3" value="4" />Зайци и кокошки. <img src="images/empty1.png" alt="empty"><br />
+		</li><br />
+		<li>
+			<p><strong>4. Към кой тип ще отнесете следната задача:</strong><br /><em> В аквариум има общо 7 октоподи и калмари. Всичките им пипала са 62. Колко са калмарите, ако те имат по 10 пипала, а октоподите по 8.</em></p>
+			<input type="radio" name="4" value="1"/>Детективски задачи; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="4" value="2"/>Множества; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="4" value="3"/>Рачешки задачи; <img src="images/empty1.png" alt="empty"><br />
+			<input type="radio" name="4" value="4"/>Зайци и кокошки. <img src="images/empty1.png" alt="empty"><br />
+		</li><br />
+		<div ><button onclick="check()">Провери</button></div>
+	</ol>
+	<script type="text/javascript">
+	function check() {
+		
+		if (document.querySelector('input[name="1"]:checked').value == 3) {
+			document.querySelector('input[name="1"]:checked').nextElementSibling.src="images/vqrno.png";
+		}else{
+			document.querySelector('input[name="1"]:checked').nextElementSibling.src="images/greshno.png";
+		}
+
+		if (document.querySelector('input[name="2"]:checked').value == 2) {
+			document.querySelector('input[name="2"]:checked').nextElementSibling.src="images/vqrno.png";
+		}else{
+			document.querySelector('input[name="2"]:checked').nextElementSibling.src="images/greshno.png";
+		}
+
+		if (document.querySelector('input[name="3"]:checked').value == 1) {
+			document.querySelector('input[name="3"]:checked').nextElementSibling.src="images/vqrno.png";
+		}else{
+			document.querySelector('input[name="3"]:checked').nextElementSibling.src="images/greshno.png";
+		}
+
+		if (document.querySelector('input[name="4"]:checked').value == 4) {
+			document.querySelector('input[name="4"]:checked').nextElementSibling.src="images/vqrno.png";
+		}else{
+			document.querySelector('input[name="4"]:checked').nextElementSibling.src="images/greshno.png";
+		}
+
+	}
+</script>
+               </div>
+            </article>
+         </section>
+         <div class="clear"></div>
+         <!-- footer -->
+         <footer>
+			<!-- sitemap and form -->
+            <ul class="list1">			   
+               <li class="button5"><a href="sitemap.html">Карта на сайта <img src="images/sitemap.png" alt="sitemap" style="width:50px; float:right"></a></li>
+               <li class="button2"><a href="new-zad.html">Предложи задача <img src="images/form.png" alt="contactform" style="width:50px; float:right"></a></li>
+            </ul>
+			<!-- search script -->
+            <script>
+               (function() {
+               	var cx = '010771404646263725437:5cwm-6bdvzo';
+               	var gcse = document.createElement('script');
+               	gcse.type = 'text/javascript';
+               	gcse.async = true;
+               	gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+               	var s = document.getElementsByTagName('script')[0];
+               	s.parentNode.insertBefore(gcse, s);
+               })();
+               document.write("<gcse:search><\/gcse:search>");
+            </script>	
+            <div class="aligncenter"> Copyright © Състезателна математика, 2019.</div>
+         </footer>
+      </div>
+   </body>
+</html>
